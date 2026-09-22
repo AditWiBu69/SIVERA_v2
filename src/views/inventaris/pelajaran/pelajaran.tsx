@@ -182,8 +182,9 @@ export default function PelajaranPanel() {
             </div>
 
             {/* --- Dialog Form "Tambah Data Mata Pelajaran" --- */}
-            <Dialog isOpen={isAddDialogOpen} onClose={closeAddDialog} onRequestClose={closeAddDialog}>
+            <Dialog isOpen={isAddDialogOpen} onClose={closeAddDialog} onRequestClose={closeAddDialog} width={640}>
                 <h4 className="mb-4">Tambah Data Mata Pelajaran</h4>
+                <div className="max-h-[70vh] overflow-y-auto pr-1 -mr-1">
                 <Form onSubmit={handleAddSubmit}>
                     <FormItem label="Kode Mapel" asterisk>
                         <Input
@@ -220,7 +221,7 @@ export default function PelajaranPanel() {
                         />
                     </FormItem>
 
-                    <div className="flex justify-end gap-2 mt-6">
+                    <div className="flex justify-end gap-2 mt-6 sticky bottom-0 bg-white dark:bg-gray-800 pt-4 pb-1">
                         <Button type="button" onClick={closeAddDialog}>
                             Batal
                         </Button>
@@ -229,6 +230,7 @@ export default function PelajaranPanel() {
                         </Button>
                     </div>
                 </Form>
+                </div>
             </Dialog>
         </div>
     )

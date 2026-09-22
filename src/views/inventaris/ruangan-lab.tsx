@@ -191,8 +191,10 @@ export default function InventoryPanel() {
                 isOpen={isAddDialogOpen}
                 onClose={closeAddDialog}
                 onRequestClose={closeAddDialog}
+                width={640}
             >
                 <h4 className="mb-4">Tambah Data Ruangan Lab</h4>
+                <div className="max-h-[70vh] overflow-y-auto pr-1 -mr-1">
                 <Form onSubmit={handleAddSubmit}>
                     <FormItem label="Kode Lab" asterisk>
                         <Input
@@ -235,7 +237,7 @@ export default function InventoryPanel() {
                         />
                     </FormItem>
 
-                    <div className="flex justify-end gap-2 mt-6">
+                    <div className="flex justify-end gap-2 mt-6 sticky bottom-0 bg-white dark:bg-gray-800 pt-4 pb-1">
                         <Button type="button" onClick={closeAddDialog}>
                             Batal
                         </Button>
@@ -244,6 +246,7 @@ export default function InventoryPanel() {
                         </Button>
                     </div>
                 </Form>
+                </div>
             </Dialog>
         </div>
     )
