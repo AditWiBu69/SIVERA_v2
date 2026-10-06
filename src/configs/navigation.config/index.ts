@@ -120,14 +120,18 @@ const navigationConfig: NavigationTree[] = [
         subMenu: [],
     },
     {
-        key: 'report',
-        path: '/report',
-        title: 'Report',
-        translateKey: 'nav.report',
-        icon: 'report',
-        type: NAV_ITEM_TYPE_ITEM,
-        authority: [],
-        subMenu: [],
+    key: 'report',
+    path: '',
+    title: 'Report',
+    translateKey: 'nav.report.report',
+    icon: 'report',                      // pakai key ikon Report yang sudah ada
+    type: NAV_ITEM_TYPE_COLLAPSE,
+    authority: [],
+    subMenu: [
+        { key: 'report.keluarMasukBarang', path: '/report/keluar-masuk-barang', title: 'Keluar Masuk Barang', translateKey: 'nav.report.keluarMasukBarang', icon: '', type: NAV_ITEM_TYPE_ITEM, authority: [], subMenu: [] },
+        { key: 'report.barangPerKategori', path: '/report/barang-per-kategori', title: 'Barang per Kategori', translateKey: 'nav.report.barangPerKategori', icon: '', type: NAV_ITEM_TYPE_ITEM, authority: [], subMenu: [] },
+        { key: 'report.pemakaianPerPelajaran', path: '/report/pemakaian-per-pelajaran', title: 'Pemakaian per Pelajaran', translateKey: 'nav.report.pemakaianPerPelajaran', icon: '', type: NAV_ITEM_TYPE_ITEM, authority: [], subMenu: [] },
+    ],
     },
     {
         key: 'masterData',
